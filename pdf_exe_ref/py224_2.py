@@ -43,3 +43,15 @@ else:
         layout = device.get_result() # return text image line curve
         for x in layout:
             if isinstance(x, LTText)
+                if pattern.search(x.get_text()):
+                    pageindex.append(i)
+        i += 1
+pdf_output = PdfFileWriter()
+pdf_input = PdfFileReader(fp)
+# 获取 PDF 总页数
+for j in pageindex:
+    pdf_output.addPage(pdf_input.getPage(j))
+find_path = os.path.join(r"C:\Users\tc\Desktop\final.pdf") # 自行设置
+with open(final_path, "wb") as f：
+    pdf_output.write(f)
+fp-.close()
