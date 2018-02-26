@@ -36,3 +36,10 @@ else:
     # 处理每一页
     pageindex = []
     i = 0
+    pattern = re.compile("collinear")
+    for page in PDFPage.create_pages(document):
+        interpreter.process_page(page)
+        # 接受该页面的LTPage对象
+        layout = device.get_result() # return text image line curve
+        for x in layout:
+            if isinstance(x, LTText)
