@@ -23,4 +23,10 @@ list = ['\r', '\n', '\t']# contractions and other word strings to drop from furt
 # to the usual English stopwords to be dropped from the document collection
 more_stop_words = ['cant', 'didnt', 'doesnt', 'dont', 'goes', 'isnt', 'hes',\ 
                    'shes', 'thats', 'theres', 'theyre', 'wont', 'youll', 'youre', 'youve',\
-                   're', 'tv', 'g', 'us', 'en']
+                   're', 'tv', 'g', 'us', 'en', 've', 'vg', 'didn', 'pg', 'gp', 'our', 'we',\
+                   'll', 'film', 'video', 'name', 'years', 'days', 'one', 'two', 'three',\
+                   'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+# start with the initial list and add to it for movie text documents
+# there is more we could do for data preparation
+# stemming... looking for contractions... possessives...
+# but we will work with 
